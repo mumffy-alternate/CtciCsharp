@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace EPI.C18_Graphs
 {
-    internal class Q02
+    internal class Q03
     {
         public static bool?[,] DarkenEnclosedREegions(bool?[,] grid)
         {
@@ -74,12 +74,12 @@ namespace EPI.C18_Graphs
         }
     }
 
-    public class C18Q02_Tests
+    public class C18Q03_Tests
     {
         private readonly ITestOutputHelper output;
         private readonly string[] encodedGrid;
         private readonly bool?[,] exampleGrid;
-        public C18Q02_Tests(ITestOutputHelper output)
+        public C18Q03_Tests(ITestOutputHelper output)
         {
             this.output = output;
 
@@ -97,7 +97,7 @@ namespace EPI.C18_Graphs
         public void Example()
         {
             output.WriteLine(C18Q01_TestHelper.MazeToString(exampleGrid, withBorder: false));
-            var darkenedGrid = Q02.DarkenEnclosedREegions(exampleGrid);
+            var darkenedGrid = Q03.DarkenEnclosedREegions(exampleGrid);
             output.WriteLine("");
             output.WriteLine(C18Q01_TestHelper.MazeToString(darkenedGrid, withBorder: false));
         }
